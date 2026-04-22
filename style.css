@@ -317,13 +317,12 @@
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
   }
 
-  .gallery-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    background: var(--light);
-    display: block;
-  }
+.gallery-img {
+  width: 100%;
+  height: 220px;        
+  object-fit: cover;  
+  display: block;
+}
 
   .gallery-caption {
     padding: .8rem 1rem;
@@ -380,4 +379,13 @@
     .sidebar { position: static; }
     .two-col { grid-template-columns: 1fr; }
     nav ul { display: none; }
+  }
+
+  @media (min-width: 1200px) {
+    .image-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .gallery-img {
+      max-height: 450px;
+    }
   }
