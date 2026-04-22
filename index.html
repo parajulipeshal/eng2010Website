@@ -10,7 +10,7 @@
 <body>
 
 <nav>
-  <div class="nav-brand">YouthVote · ENGL 2010</div>
+  <div class="nav-brand">Vote Online?</div>
   <ul>
     <li><a href="#problem">The Problem</a></li>
     <li><a href="#solution">Solution</a></li>
@@ -45,6 +45,26 @@
 <div class="main">
   <article>
 
+    <!-- ELECTION GALLERY -->
+    <div class="section reveal" id="gallery">
+      <span class="section-tag">Election & Voting</span>
+      <h2>Visual Story</h2>
+      <div class="image-gallery">
+        <div class="gallery-item">
+          <img src="image1.jpg" alt="Election image placeholder 1" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+          <img src="image2.png" alt="Election image placeholder 2" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+          <img src="image3.jpg" alt="Election image placeholder 3" class="gallery-img">
+        </div>
+        <div class="gallery-item">
+          <img src="image4.jpg" alt="Election image placeholder 4" class="gallery-img">
+        </div>
+      </div>
+    </div>
+
     <!-- PROBLEM -->
     <div class="section reveal" id="problem">
       <span class="section-tag">The Problem</span>
@@ -78,8 +98,13 @@
       </p>
 
       <div class="callout">
-        <h3>🇪🇪 Estonia already does this — nationally.</h3>
+        <h3>🇪🇪 Estonia already does this (nationally).</h3>
         <p>Since 2005, Estonia has offered internet voting in national elections. By 2023, over half of all ballots were cast online. Citizens can verify their vote was recorded and even change it before the deadline. Adoption has grown every single year.</p>
+      </div>
+
+      <div class="estonia-image">
+        <img src="" alt="Estonia online voting system" class="feature-img">
+        <p class="image-credit">Add your Estonia online voting image link here</p>
       </div>
 
       <p>
@@ -154,11 +179,11 @@
     </div>
 
     <div class="sidebar-card reveal">
-      <h3>The Vicious Cycle</h3>
+      <h3>The Defective Cycle</h3>
       <div class="cycle-steps">
         <div class="cycle-step">
           <div class="step-dot">1</div>
-          <p><strong>Youth face barriers</strong> — distance, registration confusion, no time off work.</p>
+          <p><strong>Youth face barriers</strong>. Distance, registration confusion, no time off work.</p>
         </div>
         <div class="cycle-step">
           <div class="step-dot">2</div>
@@ -190,22 +215,11 @@
 </div>
 
 <footer>
-  <span>Peshal Parajuli · ENGL 2010 · Prof. Brooks · April 2026</span>
+  <span>Peshal Parajuli · April 2026</span>
   <span>Sources: CIRCLE · CBC News · Indiana Public Media · Waller et al. · Asimakopoulos et al.</span>
 </footer>
 
-<script>
-  const obs = new IntersectionObserver(entries => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        e.target.querySelectorAll('.bar-fill').forEach(b => {
-          b.style.width = b.dataset.w + '%';
-        });
-      }
-    });
-  }, { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+<script src="script.js">
 </script>
 
 </body>
